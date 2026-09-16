@@ -11,7 +11,7 @@ H_ideal = np.array([[1, 1], [1, -1]]) / np.sqrt(2)
 CNOT = np.array([[1,0,0,0],[0,1,0,0],[0,0,0,1],[0,0,1,0]])
 
 """
-Квантовая схема:
+Quantum circuit:
 0: ───H───@───────M───
           │       │
 1: ───────X───@───M───
@@ -89,7 +89,7 @@ if len(sys.argv) > 1:
     filename = sys.argv[1]
 else:
     filename = "Measurements.txt"
-    print('Файл не указан — используется "Measurements.txt"\n')
+    print('File is not chosen — using "Measurements.txt"\n')
 
 data = read_data(filename)
 H_phys, H_err = build_physical_H(data)

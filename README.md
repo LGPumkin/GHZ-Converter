@@ -1,3 +1,2 @@
 # GHZ-Converter
-Code for GHZ Project
-So, basically, there is 4 blocks 
+How to use it: So, basically, there is 3 blocks in this code

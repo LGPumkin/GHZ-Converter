@@ -40,6 +40,8 @@ def ghz_circuit(H):
     #print(final_matrix)
     return final_matrix
 
+#End of the block №1
+
 def run(H, state):
     """passes the state of the input quanta through the chain to obtain the GHZ state"""
     psi = np.zeros(8)
@@ -78,6 +80,9 @@ def build_physical_H(data):
 
     # The transition probability is the square of the amplitude (H_ij)**2 = |P(i|j)|;
     # we take the signs from the ideal matrix (deviations are small)
+          
+#End of the block №2
+          
     H = np.sqrt(P) * np.sign(H_ideal)
     # This is error propagation. If H = √P, then by the formula δH = δP / (2√P).
     # We take the error of the probability and recalculate it into the error of the matrix element.
@@ -110,3 +115,5 @@ psi_phys = run(H_phys, state)
 
 F = abs(np.dot(psi_ideal, psi_phys))**2
 print(f"\n\nDeviation: {(1-F)*100:.4f}%")
+
+#End of the block №3
